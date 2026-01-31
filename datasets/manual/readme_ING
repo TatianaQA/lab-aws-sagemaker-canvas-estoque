@@ -1,0 +1,365 @@
+# 📦 Inventory Replenishment Prediction with Amazon SageMaker Canvas
+
+This project demonstrates how to use **Amazon SageMaker Canvas** to create a predictive model that identifies whether a product needs restocking (**reorder_needed**) based on inventory and sales data.
+
+The goal is to build a complete **no-code Machine Learning workflow**, from dataset upload to batch prediction results.
+
+---
+
+## 🚀 Project Objective
+
+Using simulated electronics inventory data, we will:
+
+- Upload a dataset into SageMaker Canvas  
+- Train a predictive model (Quick Build)
+- Predict which products require replenishment
+- Export the results for analysis
+
+---
+
+## 📂 Dataset Used
+
+The dataset contains the following columns:
+
+- `product_id`
+- `product_name`
+- `category`
+- `brand`
+- `stock_quantity`
+- `daily_sales_avg`
+- `reorder_needed` (target column)
+
+---
+
+# ✅ Step-by-Step Guide (with Screenshots)
+
+---
+
+## 1. Access AWS Console
+
+Open the AWS Console homepage.
+
+![Step 00](./prints/00-aws-console-home.png)
+
+---
+
+## 2. Search for SageMaker Canvas
+
+Use the search bar to locate **SageMaker Canvas**.
+
+![Step 01](./prints/01-busca-sagemaker-canvas.png)
+
+---
+
+## 3. Open SageMaker Dashboard
+
+Access the SageMaker main dashboard.
+
+![Step 02](./prints/02-home-sagemaker-dashboard.png)
+
+---
+
+## 4. Create a Domain
+
+Go to Domain configuration and create a new domain.
+
+![Step 03](./prints/03_sagemaker_dominios_criar_dominio.png)
+
+---
+
+## 5. Configure Single User Setup
+
+Choose the single-user quick setup option.
+
+![Step 04](./prints/04_configuracao_dominio_usuario_unico.png)
+
+---
+
+## 6. Configure Button Disabled (Waiting)
+
+The domain configuration button may be disabled while setup runs.
+
+![Step 05](./prints/05_botao_configurar_dominio_desabilitado.png)
+
+---
+
+## 7. Studio Environment Setup مراحل
+
+Canvas environment initialization process.
+
+![Step 06](./prints/06_setup_studio_configurando_ambiente_16.png)
+
+![Step 07](./prints/07_setup_studio_configurando_ambiente_96.png)
+
+![Step 08](./prints/08_setup_studio_configurando_ambiente_100.png)
+
+---
+
+## 8. Domain Ready Status
+
+Once finished, the domain shows READY.
+
+![Step 09](./prints/09_dominio_criado_status_ready.png)
+
+---
+
+## 9. Open SageMaker Studio
+
+Click to open Studio from dashboard.
+
+![Step 10](./prints/10_dashboard_sagemaker_abrir_studio.png)
+
+---
+
+## 10. Studio Home (Models)
+
+Inside Studio, access the models section.
+
+![Step 11](./prints/11_sagemaker_studio_home_models.png)
+
+---
+
+## 11. Canvas Initial Page Stopped
+
+Canvas may start in stopped state.
+
+![Step 12](./prints/12_canvas_pagina_inicial_stopped.png)
+
+---
+
+## 12. Workspace Starting
+
+Canvas initializes workspace.
+
+![Step 13](./prints/13_canvas_iniciando_workspace.png)
+
+---
+
+## 13. Canvas Running
+
+Status becomes running.
+
+![Step 14](./prints/14_canvas_status_running.png)
+
+---
+
+## 14. Amazon Q Integration
+
+Canvas interface includes Amazon Q support.
+
+![Step 15](./prints/15_canvas_web_home_amazon_q.png)
+
+---
+
+## 15. Create New Model Card
+
+Start a new model creation flow.
+
+![Step 16](./prints/16_canvas_web_home_create_model_card.png)
+
+---
+
+## 16. New Model Modal
+
+Canvas opens model creation modal.
+
+![Step 17](./prints/17_canvas_create_new_model_modal.png)
+
+---
+
+## 17. Disabled Button Example
+
+Button remains disabled until fields are filled.
+
+![Step 18](./prints/18_canvas_create_model_button_disabled.png)
+
+---
+
+## 18. Select Predictive Problem Type
+
+Choose predictive analysis model type.
+
+![Step 19](./prints/19_canvas_problem_type_predictive_selection.png)
+
+---
+
+## 19. Select Dataset Screen
+
+Canvas asks you to select dataset source.
+
+![Step 20](./prints/20_canvas_select_dataset_screen.png)
+
+---
+
+## 20. Dataset Name Creation
+
+Define dataset name.
+
+![Step 21](./prints/21_create_dataset_name.png)
+
+---
+
+## 21. Upload Dataset Screen
+
+Upload the CSV dataset.
+
+![Step 22](./prints/22_upload_dataset_screen.png)
+
+---
+
+## 22. Select CSV File (Windows)
+
+Choose the CSV file from your machine.
+
+![Step 23](./prints/23_select_csv_file_windows.png)
+
+---
+
+## 23. File Loaded Preview Ready
+
+Canvas confirms dataset is loaded.
+
+![Step 24](./prints/24_file_loaded_ready_preview.png)
+
+---
+
+## 24. Import Preview Loading
+
+Canvas processes preview.
+
+![Step 25](./prints/25_import_preview_loading.png)
+
+---
+
+## 25. Dataset Table Preview
+
+Preview dataset rows and columns.
+
+![Step 26](./prints/26_dataset_table_preview.png)
+
+---
+
+## 26. Dataset Processing List
+
+Canvas prepares dataset.
+
+![Step 27](./prints/27_dataset_processing_list.png)
+
+---
+
+## 27. Select Target Column Screen
+
+Choose target column for prediction.
+
+![Step 28](./prints/28_select_target_column_screen.png)
+
+---
+
+## 28. Target Column: reorder_needed
+
+Select `reorder_needed` as target.
+
+![Step 29](./prints/29_target_column_reorder_needed.png)
+
+---
+
+## 29. Dataset Columns Loaded
+
+Canvas confirms dataset columns.
+
+![Step 30](./prints/30_canvas_dataset_loaded_columns.png)
+
+---
+
+## 30. Target Dropdown Selection
+
+Dropdown to confirm target.
+
+![Step 31](./prints/31_canvas_select_target_column_dropdown.png)
+
+---
+
+## 31. Quick Build Ready
+
+Canvas is ready for Quick Build.
+
+![Step 32](./prints/32_canvas_target_selected_quick_build_ready.png)
+
+---
+
+## 32. Preprocessing & Validation
+
+Canvas validates and preprocesses data.
+
+![Step 33](./prints/33_canvas_preprocessing_validating_data.png)
+
+---
+
+## 33. Model Analysis Metrics
+
+Accuracy and feature impact shown.
+
+![Step 34](./prints/34_canvas_model_analysis_accuracy_impact.png)
+
+---
+
+## 34. Predict Batch Manual Option
+
+Select batch prediction manually.
+
+![Step 35](./prints/35_canvas_predict_batch_manual_option.png)
+
+---
+
+## 35. Select Dataset for Predictions Modal
+
+Canvas asks dataset for prediction input.
+
+![Step 36](./prints/36_canvas_select_dataset_for_predictions_modal.png)
+
+---
+
+## 36. Prediction Job Created
+
+Job is successfully created.
+
+![Step 37](./prints/37_canvas_prediction_job_created.png)
+
+---
+
+## 37. Predictions Ready Toast
+
+Canvas shows toast notification.
+
+![Step 38](./prints/38_canvas_predictions_ready_toast.png)
+
+---
+
+## 38. Prediction Results Table + Download
+
+Final prediction output table with download option.
+
+![Step 39](./prints/39_canvas_prediction_results_table_download.png)
+
+---
+
+# ✅ Final Result
+
+You now have a complete batch prediction output showing which products require restocking.
+
+This workflow demonstrates how SageMaker Canvas enables Machine Learning without writing code.
+
+---
+
+# 📌 Next Possible Improvements
+
+- Export predictions into dashboards (QuickSight / Power BI)
+- Replace simulated dataset with real inventory data
+- Deploy model for continuous predictions
+
+---
+
+## 👩‍💻 Author
+
+Created by **Tatiana Cristina de Araujo**  
+QA Engineer transitioning into AI + Data Projects 🚀
