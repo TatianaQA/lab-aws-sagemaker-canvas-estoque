@@ -42,6 +42,32 @@ Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda p
 -   Exporte os resultados e analise as previsões geradas.
 -   Documente suas conclusões e qualquer insight obtido a partir das previsões.
 
+
+---
+
+## ✅ Resultados do Modelo (Predições)
+
+Após treinar o modelo no **Amazon SageMaker Canvas**, foi gerado um arquivo com as previsões automáticas de renovação de estoque.
+
+📌 Arquivo gerado:
+
+- `datasets/electronics_inventory_predictions.csv`
+
+Esse arquivo contém:
+
+- A previsão se o produto precisa ou não de reposição (`reorder_needed`)
+- A probabilidade da previsão
+- Informações completas do produto (categoria, marca, estoque, vendas)
+
+### Exemplo de saída:
+
+| Prediction | Probability | Product Name       | Stock | Daily Sales |
+|----------|------------|-------------------|------|------------|
+| 1        | 54.8%      | Apple Smartphone 5 | 111  | 24         |
+
+📌 Esse resultado pode ser usado por equipes de estoque para tomar decisões rápidas e inteligentes.
+
+
 ## 🤔 Dúvidas?
 
 Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
